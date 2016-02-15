@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>
+        Calculate Mortgage
+    </title>
+</head>
+<script src="./lib/jQuery.js" type="application/javascript"></script>
+<script src="./lib/Base.js" type="application/javascript"></script>
+<script src="./lib/Dom.js" type="application/javascript"></script>
+<script src="./lib/underscore-min.js" type="application/javascript"></script>
+<script src="./assets/js/MortgageCalculation.js" type="application/javascript"></script>
+
+<script type="application/javascript">
+    CORE.loadModule(null, 'MortgageCalculation');
+    var that = this;
+    var loadPage= function() {
+
+        var contents = CORE.Dom.create({});
+        var mortgageCalculation = new CORE.MortgageCalculation(
+            {
+                container: contents
+            }
+        );
+        document.body.appendChild(contents);
+    }
+</script>
+<body onload="loadPage()">
+
+</body>
+</html>
